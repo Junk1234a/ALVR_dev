@@ -5,7 +5,6 @@ const CREATE_NO_WINDOW: u32 = 0x0800_0000;
 
 pub fn start_steamvr() {
     Command::new("vrstartup.exe")
-        .args([""])
         .creation_flags(CREATE_NO_WINDOW)
         .spawn()
         .ok();
