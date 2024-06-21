@@ -5,7 +5,7 @@ const CREATE_NO_WINDOW: u32 = 0x0800_0000;
 
 pub fn start_steamvr() {
     Command::new("cmd")
-        .args(["/C", "start", "steam://rungameid/250820"])
+        .args(["/C", "start", "C:\Program Files (x86)\Steam\steamapps\common\SteamVR\bin\win64\vrstartup.exe"])
         .creation_flags(CREATE_NO_WINDOW)
         .spawn()
         .ok();
