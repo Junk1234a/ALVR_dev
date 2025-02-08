@@ -4,7 +4,8 @@ use std::process::Command;
 const CREATE_NO_WINDOW: u32 = 0x0800_0000;
 
 pub fn start_steamvr() {
-     Command::new("vrstartup.exe")
+    Command::new("vrstartup.exe")
+        .creation_flags(CREATE_NO_WINDOW)
         .spawn()
         .ok();
 }
